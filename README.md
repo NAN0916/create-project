@@ -41,7 +41,7 @@ export default {
 
 ## 安装npm包
 
-npm i plop-create-vue
+npm i plop-create-vue-project
 
 ## 使用步骤
 

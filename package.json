@@ -1,5 +1,5 @@
 {
-  "name": "create-vue",
+  "name": "plop-create-vue-project",
   "version": "1.0.1",
   "main": "plopfile.cjs",
   "description": "",
