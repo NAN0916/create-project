@@ -1,8 +1,12 @@
 {
-  "name": "plop-test",
+  "name": "plop-create-vue",
   "version": "1.0.0",
+  "main": "plopfile.cjs",
   "description": "",
-  "main": "index.js",
+  "bin": {
+    "create-vue": "bin/index.js"
+  },
+  "type": "module",
   "scripts": {
     "plop": "plop"
   },

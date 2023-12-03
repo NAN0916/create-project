@@ -1,7 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 const process = require('process')
-const baseFile = path.join(__dirname, '../');
+const baseFile = path.join(process.cwd(), '/');
+const config = {
+   base: './index.hbs'
+}
 
 module.exports = {
    // 编写对模板件的描述
@@ -35,12 +38,13 @@ module.exports = {
    // 编写接收完参数后需要执行的操作
    actions: (data) => {
       const actions = []
+     
       if(data.type === 'file') {
         // 如果是文件
         actions.push({
             type: 'add',
             path: path.join(`${baseFile}/${data.path}`, `${data.pageName}.vue`),
-            templateFile: path.join(__dirname, './index.hbs'),
+            templateFile: path.join(__dirname, config.base),
           });
       } else {
         // 如果是文件夹 新创建文件夹
@@ -49,7 +53,7 @@ module.exports = {
         actions.push({
             type: 'add',
             path: path.join(`${baseFile}/${data.path}/${data.pageName}`, `${data.pageName}.vue`),
-            templateFile: path.join(__dirname, './index.hbs'),
+            templateFile: path.join(__dirname, config.base),
           });
       }
         
