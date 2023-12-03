@@ -1,6 +1,6 @@
 {
-  "name": "plop-create-vue",
-  "version": "1.0.0",
+  "name": "create-vue",
+  "version": "1.0.1",
   "main": "plopfile.cjs",
   "description": "",
   "bin": {
